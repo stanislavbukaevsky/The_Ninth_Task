@@ -1,17 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        Author author = new Author("Александр", "Пушкин");
-        Book book = new Book("Евгений Онегин", author, 1830);
+        Author pushkin = new Author("Александр", "Пушкин");
+        Book pushkinBook = new Book("Евгений Онегин", pushkin, 1830);
+        pushkinBook.setPublication(1833);
+        System.out.println(pushkinBook);
 
-        System.out.println("Название: " + book.getTitle() + "; Автор: " + book.getAuthor() + "; Дата публикации: " + book.getPublication());
-        book.setPublication(1830);
-        System.out.println("Дата публикации через сеттер: " + book.getPublication());
 
-        Author authorTwo = new Author("Сергей", "Есенин");
-        Book bookTwo = new Book("Черный человек", authorTwo, 1923);
+        Author esenin = new Author("Сергей", "Есенин");
+        Book eseninBook = new Book("Черный человек", esenin, 1923);
+        eseninBook.setPublication(1925);
+        System.out.println(eseninBook);
 
-        System.out.println("Название: " + bookTwo.getTitle() + "; Автор: " + bookTwo.getAuthor() + "; Дата публикации: " + bookTwo.getPublication());
-        bookTwo.setPublication(1923);
-        System.out.println("Дата публикации через сеттер: " + bookTwo.getPublication());
     }
 }
